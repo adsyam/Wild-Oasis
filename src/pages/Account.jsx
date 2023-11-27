@@ -1,5 +1,4 @@
-import Heading from "../components/ui/Heading";
-import Row from "../ui/Row";
+import { Heading, Row } from "../components/ui"
 
 function Account() {
   return (
@@ -16,7 +15,7 @@ function Account() {
         <p>Update user password form</p>
       </Row>
     </>
-  );
+  )
 }
 
-export default Account;
+export default Account

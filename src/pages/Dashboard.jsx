@@ -1,5 +1,4 @@
-import Heading from "../ui/Heading";
-import Row from "../ui/Row";
+import { Heading, Row } from "../components/ui"
 
 function Dashboard() {
   return (
@@ -7,7 +6,7 @@ function Dashboard() {
       <Heading as="h1">Dashboard</Heading>
       <p>TEST</p>
     </Row>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard

@@ -1,19 +1,16 @@
-import { useForm } from "react-hook-form";
-import Button from "../../ui/Button";
-import Form from "../../ui/Form";
-import FormRow from "../../ui/FormRow";
-import Input from "../../ui/Input";
+import { useForm } from "react-hook-form"
+import { Button, Form, FormRow, Input } from "../../ui"
 
-import { useUpdateUser } from "./useUpdateUser";
+import { useUpdateUser } from "./useUpdateUser"
 
 function UpdatePasswordForm() {
-  const { register, handleSubmit, formState, getValues, reset } = useForm();
-  const { errors } = formState;
+  const { register, handleSubmit, formState, getValues, reset } = useForm()
+  const { errors } = formState
 
-  const { updateUser, isUpdating } = useUpdateUser();
+  const { updateUser, isUpdating } = useUpdateUser()
 
   function onSubmit({ password }) {
-    updateUser({ password }, { onSuccess: reset });
+    updateUser({ password }, { onSuccess: reset })
   }
 
   return (
@@ -60,7 +57,7 @@ function UpdatePasswordForm() {
         <Button disabled={isUpdating}>Update password</Button>
       </FormRow>
     </Form>
-  );
+  )
 }
 
-export default UpdatePasswordForm;
+export default UpdatePasswordForm

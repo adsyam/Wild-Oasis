@@ -1,9 +1,8 @@
-import BookingRow from "./BookingRow";
-import Table from "../../ui/Table";
-import Menus from "../../ui/Menus";
+import { Menus, Table } from "../../ui"
+import BookingRow from "./BookingRow"
 
 function BookingTable() {
-  const bookings = [];
+  const bookings = []
 
   return (
     <Menus>
@@ -25,7 +24,7 @@ function BookingTable() {
         />
       </Table>
     </Menus>
-  );
+  )
 }
 
-export default BookingTable;
+export default BookingTable
