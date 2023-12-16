@@ -1,12 +1,12 @@
-import { supabaseUrl } from "../services/supabase";
+import { supabaseUrl } from "../services/supabase"
 
-const imageUrl = `${supabaseUrl}/storage/v1/object/public/cabin-images/`;
+const imageUrl = `${supabaseUrl}/storage/v1/object/public/cabin-images/`
 
 export const cabins = [
   {
     name: "001",
-    maxCapacity: 2,
-    regularPrice: 250,
+    max_capacity: 2,
+    regular_price: 250,
     discount: 0,
     image: imageUrl + "cabin-001.jpg",
     description:
@@ -14,8 +14,8 @@ export const cabins = [
   },
   {
     name: "002",
-    maxCapacity: 2,
-    regularPrice: 350,
+    max_capacity: 2,
+    regular_price: 350,
     discount: 25,
     image: imageUrl + "cabin-002.jpg",
     description:
@@ -23,8 +23,8 @@ export const cabins = [
   },
   {
     name: "003",
-    maxCapacity: 4,
-    regularPrice: 300,
+    max_capacity: 4,
+    regular_price: 300,
     discount: 0,
     image: imageUrl + "cabin-003.jpg",
     description:
@@ -32,8 +32,8 @@ export const cabins = [
   },
   {
     name: "004",
-    maxCapacity: 4,
-    regularPrice: 500,
+    max_capacity: 4,
+    regular_price: 500,
     discount: 50,
     image: imageUrl + "cabin-004.jpg",
     description:
@@ -41,8 +41,8 @@ export const cabins = [
   },
   {
     name: "005",
-    maxCapacity: 6,
-    regularPrice: 350,
+    max_capacity: 6,
+    regular_price: 350,
     discount: 0,
     image: imageUrl + "cabin-005.jpg",
     description:
@@ -50,8 +50,8 @@ export const cabins = [
   },
   {
     name: "006",
-    maxCapacity: 6,
-    regularPrice: 800,
+    max_capacity: 6,
+    regular_price: 800,
     discount: 100,
     image: imageUrl + "cabin-006.jpg",
     description:
@@ -59,8 +59,8 @@ export const cabins = [
   },
   {
     name: "007",
-    maxCapacity: 8,
-    regularPrice: 600,
+    max_capacity: 8,
+    regular_price: 600,
     discount: 100,
     image: imageUrl + "cabin-007.jpg",
     description:
@@ -68,11 +68,11 @@ export const cabins = [
   },
   {
     name: "008",
-    maxCapacity: 10,
-    regularPrice: 1400,
+    max_capacity: 10,
+    regular_price: 1400,
     discount: 0,
     image: imageUrl + "cabin-008.jpg",
     description:
       "Experience the epitome of luxury and grandeur with your large group or multiple families in our grand cabin 008. This cabin offers a lavish retreat that caters to all your needs and desires. The cabin features an opulent design and boasts of high-end finishes, intricate details and the finest quality wood throughout. Inside, the cabin features multiple grand living areas with fireplaces, a formal dining area, and a gourmet kitchen that is a chef's dream. The bedrooms are designed for ultimate comfort and luxury, with plush beds and en-suite spa-inspired bathrooms. Step outside and immerse yourself in the beauty of nature from your private deck, featuring a luxurious hot tub and ample seating areas for ultimate relaxation and enjoyment.",
   },
-];
+]
