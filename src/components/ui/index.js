@@ -25,6 +25,7 @@ import SpinnerMini from "./SpinnerMini"
 // import Table from "./Table"
 import FormRow from "./FormRow"
 import Input from "./Input"
+import Table from "./Table"
 import TableOperations from "./TableOperations"
 import Tag from "./Tag"
 import Textarea from "./Textarea"
@@ -56,6 +57,7 @@ export {
   //   Select,
   Spinner,
   SpinnerMini,
+  Table,
   //   Table,
   TableOperations,
   Tag,
