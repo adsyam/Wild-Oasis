@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const StyledSelect = styled.select`
   font-size: 1.4rem;
@@ -12,4 +12,18 @@ const StyledSelect = styled.select`
   background-color: var(--color-grey-0);
   font-weight: 500;
   box-shadow: var(--shadow-sm);
-`;
+`
+
+export default function Select({ options, value, ...props }) {
+
+    // cl
+  return (
+    <StyledSelect value={value}>
+      {options.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </StyledSelect>
+  )
+}
