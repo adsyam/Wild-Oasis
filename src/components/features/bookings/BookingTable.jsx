@@ -1,4 +1,5 @@
-import { Menus, Table } from "../../ui"
+import Menus from "../../ui/Menus"
+import { Table } from "../../ui"
 import BookingRow from "./BookingRow"
 
 function BookingTable() {

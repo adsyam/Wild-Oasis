@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { format, isToday } from "date-fns";
-
 import { Tag, Table } from "../../ui";
-
-import { formatCurrency } from "../../utils/helpers";
-import { formatDistanceFromNow } from "../../utils/helpers";
+import { formatCurrency, formatDistanceFromNow } from "../../../utils/helpers"
 
 const Cabin = styled.div`
   font-size: 1.6rem;

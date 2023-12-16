@@ -1,9 +1,7 @@
 import styled from "styled-components"
-
+import useMoveBack from "../../../hooks/useMoveBack"
 import { Button, ButtonGroup, ButtonText, Heading, Row, Tag } from "../../ui"
 import BookingDataBox from "./BookingDataBox"
-
-import { useMoveBack } from "../../hooks/useMoveBack"
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -11,7 +9,7 @@ const HeadingGroup = styled.div`
   align-items: center;
 `
 
-function BookingDetail() {
+export default function BookingDetail() {
   const booking = {}
   const status = "checked-in"
 
@@ -43,5 +41,3 @@ function BookingDetail() {
     </>
   )
 }
-
-export default BookingDetail

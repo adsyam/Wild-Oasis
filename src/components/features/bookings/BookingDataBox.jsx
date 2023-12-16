@@ -6,10 +6,9 @@ import {
   HiOutlineHomeModern,
 } from "react-icons/hi2"
 import styled from "styled-components"
-
-import { DataItem, Flag } from "../../ui"
-
-import { formatCurrency, formatDistanceFromNow } from "../../utils/helpers"
+import { formatCurrency, formatDistanceFromNow } from "../../../utils/helpers"
+import DataItem from "../../ui/DataItem"
+import { Flag } from "../../ui/Flag"
 
 const StyledBookingDataBox = styled.section`
   /* Box */
