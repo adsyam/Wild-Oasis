@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import { useMoveBack } from "../../../hooks/useMoveBack"
 import {
@@ -9,8 +10,8 @@ import {
   Spinner,
   Tag,
 } from "../../ui"
-import useBooking from "./useBooking"
 import BookingDataBox from "./BookingDataBox"
+import useBooking from "./useBooking"
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ export default function BookingDetail() {
   const { status, id: bookingId } = booking
 
   const moveBack = useMoveBack()
+  const navigate = useNavigate()
 
   const statusToTagName = {
     unconfirmed: "blue",
@@ -46,6 +48,11 @@ export default function BookingDetail() {
       <BookingDataBox booking={booking} />
 
       <ButtonGroup>
+        {status === "unconfirmed" && (
+          <Button onClick={() => navigate(`/checkin/${bookingId}`)}>
+            Check in
+          </Button>
+        )}
         <Button $variation="secondary" onClick={moveBack}>
           Back
         </Button>

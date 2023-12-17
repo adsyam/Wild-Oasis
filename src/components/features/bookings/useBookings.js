@@ -1,7 +1,7 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query"
 import { useSearchParams } from "react-router-dom"
 import { getBookings } from "../../../services/apiBookings"
-import { ITEM_LIMIT } from "../../../utils/constants"
+import { ITEM_PER_PAGE } from "../../../utils/constants"
 
 export default function useBookings() {
   const queryClient = useQueryClient()
@@ -28,7 +28,7 @@ export default function useBookings() {
     queryFn: () => getBookings({ filter, sortBy, page }),
   })
 
-  const pageCount = Math.ceil(count / ITEM_LIMIT)
+  const pageCount = Math.ceil(count / ITEM_PER_PAGE)
 
   if (page < pageCount) {
     queryClient.prefetchQuery({

@@ -1,4 +1,4 @@
-import { ITEM_LIMIT } from "../utils/constants"
+import { ITEM_PER_PAGE } from "../utils/constants"
 import { getToday } from "../utils/helpers"
 import supabase from "./supabase"
 
@@ -13,8 +13,8 @@ export async function getBookings({ filter, sortBy, page }) {
     query = query.order(sortBy.field, { ascending: sortBy.direction === "asc" })
 
   if (page) {
-    const from = (page - 1) * ITEM_LIMIT
-    const to = from + ITEM_LIMIT - 1
+    const from = (page - 1) * ITEM_PER_PAGE
+    const to = from + ITEM_PER_PAGE - 1
 
     query = query.range(from, to)
   }

@@ -1,7 +1,7 @@
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2"
 import { useSearchParams } from "react-router-dom"
 import styled from "styled-components"
-import { ITEM_LIMIT } from "../../utils/constants"
+import { ITEM_PER_PAGE } from "../../utils/constants"
 
 const StyledPagination = styled.div`
   width: 100%;
@@ -66,7 +66,7 @@ export default function Pagination({ count }) {
     ? 1
     : Number(searchParams.get("page"))
 
-  const pageCount = Math.ceil(count / ITEM_LIMIT)
+  const pageCount = Math.ceil(count / ITEM_PER_PAGE)
 
   function nextPage() {
     const next = currentPage === pageCount ? currentPage : currentPage + 1
@@ -87,9 +87,9 @@ export default function Pagination({ count }) {
   return (
     <StyledPagination>
       <p>
-        Showing <span>{(currentPage - 1) * ITEM_LIMIT + 1}</span> to{" "}
+        Showing <span>{(currentPage - 1) * ITEM_PER_PAGE + 1}</span> to{" "}
         <span>
-          {currentPage === pageCount ? count : currentPage * ITEM_LIMIT}
+          {currentPage === pageCount ? count : currentPage * ITEM_PER_PAGE}
         </span>{" "}
         of <span>{count}</span> results
       </p>

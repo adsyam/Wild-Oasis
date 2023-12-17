@@ -1,1 +1,1 @@
-export const ITEM_LIMIT = 10
+export const ITEM_PER_PAGE = 10
