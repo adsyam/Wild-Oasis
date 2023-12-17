@@ -14,17 +14,17 @@ const Box = styled.div`
 `
 
 function CheckinBooking() {
-  const moveBack = useMoveBack()
+  const { moveBack } = useMoveBack()
 
   const booking = {}
 
   const {
     id: bookingId,
     guests,
-    totalPrice,
-    numGuests,
-    hasBreakfast,
-    numNights,
+    total_price,
+    number_oof_guests,
+    has_breakfast,
+    num_of_nights,
   } = booking
 
   function handleCheckin() {}
