@@ -7,6 +7,7 @@ import {
   ButtonGroup,
   ButtonText,
   ConfirmDelete,
+  Empty,
   Heading,
   Row,
   Spinner,
@@ -41,6 +42,7 @@ export default function BookingDetail() {
   }
 
   if (isLoading) return <Spinner />
+  if (Object.keys(booking).length === 0) return <Empty resourceName="booking" />
 
   return (
     <>
