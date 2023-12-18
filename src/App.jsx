@@ -6,8 +6,10 @@ import GlobalStyles from "./styles/GlobalStyles"
 
 import {
   Account,
+  Booking,
   Bookings,
   Cabins,
+  Checkin,
   Dashboard,
   Login,
   PageNotFound,
@@ -18,8 +20,6 @@ import {
 import { AppLayout } from "./components/ui"
 import ProtectedRoute from "./components/ui/ProtectedRoute"
 import { DarkModeProvider } from "./context/DarkMode"
-import Booking from "./pages/Booking"
-import Checkin from "./pages/checkin"
 
 const queryClient = new QueryClient({
   defaultOptions: {

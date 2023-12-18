@@ -1,6 +1,8 @@
 import Account from "./Account"
+import Booking from "./Booking"
 import Bookings from "./Bookings"
 import Cabins from "./Cabins"
+import Checkin from "./Checkin"
 import Dashboard from "./Dashboard"
 import Login from "./Login"
 import PageNotFound from "./PageNotFound"
@@ -9,8 +11,10 @@ import Users from "./Users"
 
 export {
   Account,
+  Booking,
   Bookings,
   Cabins,
+  Checkin,
   Dashboard,
   Login,
   PageNotFound,
