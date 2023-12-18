@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { Spinner } from "../../ui"
 import useCabins from "../cabins/useCabins"
+import TodayActivity from "../check-in-out/TodayActivity"
+import DurationChart from "./DurationChart"
 import SalesChart from "./SalesChart"
 import Stats from "./Stats"
 import useRecentBookings from "./useRecentBookings"
@@ -25,6 +27,11 @@ export default function DashboardLayout() {
 
   const { cabins, isLoading: isLoadingCabins } = useCabins()
 
+  //   console.log(
+  //     "confirmedStays:",
+  //     confirmedStays.map((c) => c.number_of_nights)
+  //   )
+
   if (isLoadingBookings || isLoadingStays || isLoadingCabins) return <Spinner />
 
   return (
@@ -35,8 +42,8 @@ export default function DashboardLayout() {
         numDays={numDays}
         cabinCount={cabins.length}
       />
-      <div>Today&#39;s activity</div>
-      <div>Chart stay durations</div>
+      <TodayActivity />
+      <DurationChart confirmedStays={confirmedStays} />
       <SalesChart numDays={numDays} bookings={bookings} />
     </StyledDashboardLayout>
   )
