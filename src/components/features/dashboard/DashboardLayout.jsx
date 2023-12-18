@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import { Spinner } from "../../ui"
+import useCabins from "../cabins/useCabins"
+import SalesChart from "./SalesChart"
 import Stats from "./Stats"
 import useRecentBookings from "./useRecentBookings"
 import useRecentStays from "./useRecentStays"
-import useCabins from "../cabins/useCabins"
 
 const StyledDashboardLayout = styled.div`
   display: grid;
@@ -36,7 +37,7 @@ export default function DashboardLayout() {
       />
       <div>Today&#39;s activity</div>
       <div>Chart stay durations</div>
-      <div>Chart sales</div>
+      <SalesChart numDays={numDays} bookings={bookings} />
     </StyledDashboardLayout>
   )
 }
